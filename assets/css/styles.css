@@ -1,0 +1,192 @@
+/*--- Varibales de color y fuentes ---*/
+:root {
+  --negro:      #0a0708;
+  --superficie: #130e10;
+  --dorado:     #E8A020;
+  --rojo:       #C0392B;
+  --texto:      #F2EAE0;
+  --gris:       #A08878;
+  --borde:      rgba(232, 160, 32, 0.2);
+}
+
+/* --- Reset básico --- */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html { scroll-behavior: smooth; }
+
+body {
+  background-color: var(--negro);
+  color: var(--texto);
+  font-family: 'DM Sans', sans-serif;
+  line-height: 1.6;
+}
+
+
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+a { 
+    text-decoration: none; color: inherit; 
+}
+
+
+ul { 
+    list-style: none; 
+}
+
+img { 
+    max-width: 100%; display: block; 
+}
+
+/* =============================================
+   UTILIDADES
+   ============================================= */
+
+.container {
+  width: 90%;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.section-header {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+.section-header h2 {
+  font-family: 'Playfair Display', serif;
+  font-size: 2.2rem;
+  margin-bottom: 0.5rem;
+}
+.section-header p { color: var(--gris); }
+
+.section-tag {
+  display: inline-block;
+  font-size: 0.72rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--dorado);
+  border: 1px solid var(--borde);
+  padding: 0.2rem 0.8rem;
+  border-radius: 2rem;
+  margin-bottom: 0.75rem;
+}
+
+.btn {
+  display: inline-block;
+  padding: 0.75rem 1.75rem;
+  border-radius: 6px;
+  font-weight: 600;
+  font-size: 0.9rem;
+  cursor: pointer;
+  transition: background 0.3s, transform 0.2s;
+  border: none;
+}
+.btn-primary {
+  background: var(--dorado);
+  color: #0a0708;
+}
+.btn-primary:hover { background: #f5b432; transform: translateY(-2px); }
+.btn-ghost {
+  background: transparent;
+  color: var(--texto);
+  border: 1px solid rgba(255,255,255,0.25);
+}
+.btn-ghost:hover { border-color: var(--dorado); color: var(--dorado); }
+.btn-header {
+  background: var(--dorado);
+  color: #0a0708;
+  font-size: 0.82rem;
+  padding: 0.55rem 1.2rem;
+  font-weight: 700;
+}
+.btn-mobile {
+  display: block;
+  text-align: center;
+  background: var(--dorado);
+  color: #0a0708 !important;
+  font-weight: 700;
+  padding: 0.8rem;
+  border-radius: 6px;
+  margin-top: 0.5rem;
+}
+
+
+/* =============================================
+   HEADER
+   ============================================= */
+
+.site-header { 
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    background: rgba(10, 7, 8, 0.9);
+    backdrop-filter: blur(10px);
+    border-bottom: 1px solid var(--borde);
+}
+
+/* Flexbox: logo – nav – botón */
+.header-inner {
+    max-width: var(--container-max);
+    margin: 0 auto;
+    padding: var(--spacing-sm) var(--container-padding);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo { 
+    display: flex; 
+    align-items: center; 
+    gap: 0.5rem; 
+}
+
+.logo-icon { 
+    font-size: 1.5rem; 
+}
+
+.logo-text  {
+    display: flex; 
+    flex-direction: column; 
+    line-height: 1; 
+}
+
+.logo-main  { 
+    font-family: 'Bebas Neue', sans-serif; 
+    font-size: 1.2rem; 
+    letter-spacing: 0.1em; 
+    color: var(--dorado); 
+}
+
+.logo-sub   { 
+    font-size: 0.6rem; 
+    letter-spacing: 0.2em; 
+    color: var(--gris); 
+    text-transform: uppercase; 
+}
+
+.main-nav ul {
+    display: flex;
+    gap: 0.25rem;
+}
+
+.main-nav a {
+    font-size: 0.88rem;
+    color: var(--gris); 
+    padding: 0.4rem 0.8rem;
+    border-radius: 6px;
+    transition: color 0.2s, background 0.2s;
+}
+
+.main-nav a:hover {
+    color: var(--dorado);
+    background: rgba(233, 160, 32, 0.1);
+}
