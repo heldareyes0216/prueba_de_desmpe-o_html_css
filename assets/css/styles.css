@@ -253,6 +253,11 @@ p {
     justify-content: space-between;
 }
 
+.header__container img {
+    width: 100px;
+    height: 100px;
+}
+
 /* Logo */
 .header__logo {
     display: flex;
@@ -872,12 +877,15 @@ p {
   border-radius: 6px;
   transition: color 0.2s, border-color 0.2s;
 }
-.sponsor:hover { color: var(--dorado); border-color: rgba(232,160,32,0.4); }
+.sponsor:hover { 
+    color: var(--color-gold); 
+    border-color: rgba(232,160,32,0.4); 
+}
 
 
 /* ============================================
    11. CTA FINAL
-============================================ */
+============================================ */ 
 .cta-final {
     padding: var(--spacing-3xl) var(--container-padding);
     background: 
@@ -1026,6 +1034,7 @@ p {
     color: var(--color-text-muted);
     font-size: 0.8rem;
 }
+
 
 /* ============================================
    13. MEDIA QUERIES - Responsive Design
@@ -1252,13 +1261,5 @@ p {
     opacity: 0.6;
 }
 
-/* Línea decorativa animada */
-.section__header::after {
-    content: '';
-    display: block;
-    width: 60px;
-    height: 3px;
-    background: linear-gradient(90deg, var(--color-gold), var(--color-neon-pink));
-    margin: var(--spacing-md) auto 0;
-    border-radius: 2px;
-}
+
+
