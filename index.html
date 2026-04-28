@@ -11,246 +11,275 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 </head>
 <body>
+
+    <!-- ============================================
+         HEADER - Navegación principal con Flexbox
+    ============================================= -->
+    <header class="header">
+        <div class="header__container">
+            <!-- Logo del festival -->
+            <div class="header__logo">
+                <span class="logo__icon"></span>
+                <span class="logo__text">The Shattered<span class="logo__highlight">Riffs</span></span>
+            </div>
+
+            <!-- Navegación principal -->
+            <nav class="header__nav" aria-label="Navegación principal">
+                <ul class="nav__list">
+                    <li class="nav__item"><a href="#inicio" class="nav__link">Inicio</a></li>
+                    <li class="nav__item"><a href="#events" class="nav__link">Events</a></li>
+                    <li class="nav__item"><a href="#abuot" class="nav__link">About</a></li>
+                    <li class="nav__item"><a href="#zonas" class="nav__link">Zones music</a></li>
+                    <li class="nav__item"><a href="#galeria" class="nav__link">Galería</a></li>
+                    <li class="nav__item"><a href="#contacto" class="nav__link nav__link--cta">Buy tickets</a></li>
+                </ul>
+            </nav>
+
+             <!-- Botón menú móvil (solo visual, sin JS) -->
+            <button class="header__menu-btn" aria-label="Menú de navegación">
+                <span class="menu-btn__line"></span>
+                <span class="menu-btn__line"></span>
+                <span class="menu-btn__line"></span>
+            </button>
+        </div>
+    </header>
+
+
     
+        <!-- ============================================
+             HERO SECTION - Sección principal de impacto
+        ============================================= -->
+        <section id="inicio" class="hero">
+            <div class="hero__overlay"></div>
+            <div class="hero__content">
+                <p class="hero__tagline">✨A musical experience under the stars✨</p>
+                <h1 class="hero__title">Music<span class="hero__title--highlight">nigth </span></h1>
+                <p class="hero__subtitle">
+                    Discover the best rock songs with our band
+                </p>
+                <div class="hero__cta-group">
+                    <a href="#fechas" class="btn btn--primary">See Upcoming Dates</a>
+                    <a href="#zonas" class="btn btn--secondary">Esxplore music</a>
+                </div>
+                <div class="hero__stats">
+                    <div class="stat">
+                        <span class="stat__number">5+</span>
+                        <span class="stat__label">surprise guests</span>
+                    </div>
+                    <div class="stat">
+                        <span class="stat__number">3</span>
+                        <span class="stat__label">Citys</span>
+                    </div>
+                    <div class="stat">
+                        <span class="stat__number">10K+</span>
+                        <span class="stat__label">public</span>
+                    </div>
+                </div>
+            </div>
+            <!-- Indicador de scroll -->
+            <div class="hero__scroll-indicator">
+                <span>Slide</span>
+                <div class="scroll-arrow"></div>
+            </div>
+        </section>
 
-  <!--HEADER-->
-  <header class="site-header" id="top"
-    <div class="header-inner">
-        <!--Logo-->
-        <div class="logo">
-          <!--<img src="./assets/icons/logo.ico" alt="logo" class="logo-icon">-->
-          <div class="logo-text">
-            <span class="logo-main">Shattered</span>
-            <span class="logo-sub">Riffs</span>
-          </div>
-        </div>
+        <!-- ============================================
+             SECCIÓN PRÓXIMAS FECHAS - Tabla HTML semántica
+        ============================================= -->
+        <section id="fechas" class="fechas">
+            <div class="section__container">
+                <header class="section__header">
+                    <span class="section__label">Calendar 2026</span>
+                    <h2 class="section__title">Upcoming<span class="text--gold">Dates</span></h2>
+                    <p class="section__description">
+                        Don't miss any of our stops. Book your spot in the nearest city.
+                    </p>
+                </header>
 
-        <!-- Navegación desktop -->
-        <nav class="main-nav" aria-label="Navegacion principal">
-            <ul>
-                <li><a href="#events">Events</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="#music">Music</a></li>
-                <li><a href="#media">Media</a></li>
-                <li><a href="#music">Contact</a></li>
-            </ul>
-        </nav>
+                <div class="table-wrapper">
+                    <table class="fechas__table">
+                        <thead>
+                            <tr>
+                                <th scope="col">Dates</th>
+                                <th scope="col">Citys</th>
+                                <th scope="col">Schedule</th>
+                                <th scope="col">Status</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td data-label="Fecha">15-17 Julio</td>
+                                <td data-label="Ciudad">
+                                    <span class="city-badge">Ciudad de México</span>
+                                </td>
+                                <td data-label="Horario">18:00 - 02:00</td>
+                                <td data-label="Estado"><span class="status status--available">Available</span></td>
+                            </tr>
+                            <tr>
+                                <td data-label="Fecha">22-24 Julio</td>
+                                <td data-label="Ciudad">
+                                    <span class="city-badge">Guadalajara</span>
+                                </td>
+                                <td data-label="Horario">19:00 - 03:00</td>
+                                <td data-label="Estado"><span class="status status--limited">Status limited</span></td>
+                            </tr>
+                            <tr>
+                                <td data-label="Fecha">5-7 Agosto</td>
+                                <td data-label="Ciudad">
+                                    <span class="city-badge">Monterrey</span>
+                                </td>
+                                <td data-label="Horario">18:00 - 02:00</td>
+                                <td data-label="Estado"><span class="status status--available">Available</span></td>
+                            </tr>
+                            <tr>
+                                <td data-label="Fecha">12-14 Agosto</td>
+                                <td data-label="Ciudad">
+                                    <span class="city-badge">Cancún</span>
+                                </td>
+                                <td data-label="Horario">20:00 - 04:00</td>
+                                <td data-label="Estado"><span class="status status--available">Available</span></td>
+                            </tr>
+                            <tr>
+                                <td data-label="Fecha">26-28 Agosto</td>
+                                <td data-label="Ciudad">
+                                    <span class="city-badge">Oaxaca</span>
+                                </td>
+                                <td data-label="Horario">18:00 - 01:00</td>
+                                <td data-label="Estado"><span class="status status--soldout">Soldout</span></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
 
-        <!-- CTA header -->
-         <a href="#events" class="btn btn-header">Buy tickets</a> 
+                <div class="fechas__cta">
+                    <a href="#contacto" class="btn btn--primary btn--large">Book My Ticket</a>
+                </div>
+            </div>
+        </section>
 
-         <!-- Menu hamburguesa-->
-          <button class="hamburguer" id="hamburguer" aria-label="Abrir menú" aria-expanded="false">
-            <span></span>
-            <span></span>
-            <span></span>
-            <span></span>
-          </button>     
-    </div>
+     <!-- ============================================
+             SECCIÓN SOBRE EL FESTIVAL - Lista semántica
+        ============================================= -->
+        <section id="sobre" class="sobre">
+            <div class="section__container">
+                <div class="sobre__grid">
+                    <!-- Columna de contenido -->
+                    <div class="sobre__content">
+                        <header class="section__header section__header--left">
+                            <span class="section__label">Our histoty</span>
+                            <h2 class="section__title">About <span class="text--gold">The concert</span></h2>
+                        </header>
+                        
+                         <p class="sobre__intro">
+                            <strong> Shattered Riffs</strong>  Shattered Riffs is a high-energy rock band known for powerful live performances
+                        and raw sound.
+                        </p>
 
+                        <p class="sobre__intro">
+                            <strong>Music nigth</strong> 
+                        </p>
 
-    <!-- Menu mobile -->
-     <nav class="mobile-nav" id="mobileNav" aria-label="Menú móvil">
-      <ul>
-        <li><a href="#fechas" class="mobile-link">Events</a></li>
-        <li><a href="#sobre" class="mobile-link">About</a></li>
-        <li><a href="#musica" class="mobile-link">Music<al/a></li>
-        <li><a href="#media" class="mobile-link">Media</a></li>
-        <li><a href="#contacto" class="mobile-link">Contact</a></li>
-        <li><a href="#fechas" class="btn btn-mobile">View all events</a></li>
-      </ul>
-    </nav>
-  </header>
-  
-  <!-- ========== MAIN ========== -->
-  <main>
-
-    <!-- ========== HERO SECTION ========== -->
-    <section class="hero" id="inicio" aria-label="Main section">
-      <div class="hero-bg">
-        <div class="hero-overlay"></div>
-        <!-- Partículas decorativas -->
-        <div class="particle p1"></div>
-        <div class="particle p2"></div>
-        <div class="particle p3"></div>
-        <div class="particle p4"></div>
-      </div>
-
-      <div class="hero-content">
-        <h1 class="hero-title">
-          the best experience <br/>
-          <em>of your life</em><br/>
-          <span class="hero-title-accent">Unforgettable Experiences.</span>
-        </h1>
-
-        <div class="hero-actions">
-          <a href="#fechas" class="btn btn-primary">More information</a>
-          <a href="#galeria" class="btn btn-ghost">View gallery</a>
-        </div>
-
-        <div class="hero-stats">
-          <div class="stat">
-            <strong>3</strong>
-            <span>Citys</span>
-          </div>
-          <div class="stat-divider"></div>
-          <div class="stat">
-            <strong>50K+</strong>
-            <span>Audience</span>
-          </div>
-        </div>
-      </div>
-
-      <div class="hero-scroll-hint">
-        <span>Scroll</span>
-        <div class="scroll-line"></div>
-      </div>
-    </section>
-
-
-     <!-- ========== PRÓXIMAS FECHAS ========== -->
-    <section class="section-fechas" id="fechas" aria-label="Próximas fechas">
-      <div class="container">
-        <div class="section-header">
-          <span class="section-tag">Calendar</span>
-          <h2>Upcoming dates</h2>
-          <p>Three nights where we vibrated to the rhythms of good rock</p>
-        </div>
-
-         <!-- Tabla HTML obligatoria -->
-        <div class="table-wrapper">
-          <table>
-            <caption>Dates and schedule of upcoming dates</caption>
-            <thead>
-              <tr>
-                <th>Date</th>
-                <th>City</th>
-                <th>Venue</th>
-                <th>Tickets</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td><span class="date-tag">15 May</span></td>
-                <td>Madrid</td>
-                <td>Sala sol</td>
-                <td>6:00 PM – 1:00 AM</td>
-                <td data-label="Estado"><span class="status status--available">Disponible</span></td>
-              </tr>
-              <tr>
-                <td><span class="date-tag">18 May</span></td>
-                <td>Bacerlona</td>
-                <td>Razzmatazz</td>
-                <td>7:00 PM – 2:00 AM</td>
-                <td data-label="Estado"><span class="status status--available">Disponible</span></td>
-              </tr>
-              <tr>
-                <td><span class="date-tag">22 May</span></td>
-                <td>Valencia</td>
-                <td>Moon Club</td>
-                <td>5:30 PM – 12:30 AM</td>
-                <td data-label="Estado"><span class="status status--soldout">Agotado</span></td>
-              </tr>
-            </tbody>
-          </table>
-        </div>
-      </div>
-    </section>
-
-    <!-- ========== SOBRE EL FESTIVAL ========== -->
-    <section class="section-sobre" id="sobre" aria-label="Sobre el festival">
-      <div class="container sobre-grid">
-        <div class="sobre-text">
-          <span class="section-tag">About us</span>
-          <h2>About the festival</h2>
-          <p class="sobre-lead">
-            Shattered Riffs is a high-energy rock band known for powerful live performances
-            and raw sound.
-          </p>
-
-           <!-- Lista semántica obligatoria -->
-          <div class="what-you-find">
-            <h3>What will you find?</h3>
-            <ul class="feature-list">
-              <li>
-                <span class="list-icon">🤟🏻</span>
-                <span>Classic Rock</span>
-              </li>
-              <li>
-                <span class="list-icon">🎸</span>
-                <span>Hard Rock</span>
-              </li>
-              <li>
-                <span class="list-icon">🎵</span>
-                <span>Alternative</span>
-              </li>
-            </ul>
-          </div>
-        </div>
-
-        <div class="sobre-visual">
-          <div class="visual-card big">
-            <img src="./assets/img/img-4.jpg" alt="">
-            <div class="visual-img img-img-4"></div>
-          </div>
-          <div class="visual-card small">
-            <img src="./assets/img/img-5.jpg" alt="">
-            <div class="visual-img img-img-5"></div>
-            <div class="visual-badge">Est. 2019</div>
-          </div>
-        </div>
-      </div>
-    </section>
+                        <h3 class="sobre__subtitle">What awaits you?</h3>
+                        
+                        <!-- Lista semántica de experiencias -->
+                        <ul class="sobre__lista">
+                            <li class="sobre__item">
+                                <span class="item__icon">🎵</span>
+                                <div class="item__content">
+                                    <strong>Classic Rock</strong>
+                                    <p>good rock</p>
+                                </div>
+                            </li>
+                            <li class="sobre__item">
+                                <span class="item__icon">🎵</span>
+                                <div class="item__content">
+                                    <strong>Hard Rock</strong>
+                                    <p>Full power</p>
+                                </div>
+                            </li>
+                            <li class="sobre__item">
+                                <span class="item__icon">🎵</span>
+                                <div class="item__content">
+                                    <strong>Alternative</strong>
+                                    <p>clasics</p>
+                                </div>
+                        </ul>
+                    </div>
 
      <!-- ========== GALERÍA ========== -->
-    <section class="section-galeria" id="galeria" aria-label="Galería del concierto">
-      <div class="container">
-        <div class="section-header">
-          <span class="section-tag">Gallery</span>
-          <h2>Concert moments</h2>
-        </div>
+    <section id="galeria" class="galeria">
+            <div class="section__container">
+                <header class="section__header">
+                    <span class="section__label">Moments</span>
+                    <h2 class="section__title">gallery<span class="text--gold">Band</span></h2>
+                    <p class="section__description">
+                        Relive the best moments from previous editions.
+                    </p>
+                </header>
 
-        <div class="gallery-grid">
-          <div class="gallery-item gi-1">
-            <img src="./assets/img/img-6.jpg" alt="">
-              <div class="gallery-overlay">
-              </div>
+                <!-- Grid de galería con CSS Grid -->
+                <div class="galeria__grid">
+                    <figure class="galeria__item galeria__item--large">
+                        <img src="./assets/img/img-10.jpg" alt="" class="galeria__image">
+                        <figcaption class="galeria__caption"></figcaption>
+                    </figure>
+                    <figure class="galeria__item">
+                        <img src="./assets/img/img-7.jpg" 
+                             alt="" 
+                             class="galeria__image">
+                        <figcaption class="galeria__caption">vibes</figcaption>
+                    </figure>
+                    <figure class="galeria__item">
+                        <img src="./assets/img/img-4.jpg" 
+                             alt="" 
+                             class="galeria__image">
+                        <figcaption class="galeria__caption">Guitar</figcaption>
+                    </figure>
+                    <figure class="galeria__item galeria__item--tall">
+                        <img src="./assets/img/img-6.jpg" 
+                             alt="" 
+                             class="galeria__image">
+                        <figcaption class="galeria__caption">yeah</figcaption>
+                    </figure>
+                    <figure class="galeria__item">
+                        <img src="./assets/img/img-3.jpg" 
+                             alt="" 
+                             class="galeria__image">
+                        <figcaption class="galeria__caption">Drums</figcaption>
+                    </figure>
+                    <figure class="galeria__item">
+                        <img src="./assets/img/img-2.jpg" 
+                             alt="" 
+                             class="galeria__image">
+                        <figcaption class="galeria__caption">rock and roll</figcaption>
+                    </figure>
+                    <figure class="galeria__item galeria__item--wide">
+                        <img src="./assets/img/img-5.jpg" 
+                             alt="" 
+                             class="galeria__image">
+                        <figcaption class="galeria__caption">Panoramic view</figcaption>
+                    </figure>
+                </div>
             </div>
-          </div>
-          <div class="gallery-item gi-2">
-            <img src="./assets/img/img-9.jpg" alt="">
-              <div class="gallery-overlay">
-              </div>
+        </section>
+
+          <!-- ============================================
+             SECCIÓN CTA - Llamado a la acción final
+        ============================================= -->
+        <section class="cta-final">
+            <div class="cta-final__container">
+                <h2 class="cta-final__title">Ready to experience the<span class="text--gold">experience?</span>?</h2>
+                <p class="cta-final__text">
+                    Tickets are limited. Secure your spot at the most anticipated the concert of the year.
+                </p>
+                <div class="cta-final__buttons">
+                    <a href="#contacto" class="btn btn--primary btn--large">Buy tickets</a>
+                    <a href="#fechas" class="btn btn--outline btn--large">See Prices</a>
+                </div>
             </div>
-          </div>
-          <div class="gallery-item gi-3">
-            <img src="./assets/img/img-10.jpg" alt="">
-              <div class="gallery-overlay">
-              </div>
-            </div>
-          </div>
-          <div class="gallery-item gi-4">
-            <img src="./assets/img/img-8.jpg" alt="">
-              <div class="gallery-overlay">
-              </div>
-            </div>
-          </div>
-          <div class="gallery-item gi-5">
-            <img src="./assets/img/img-7.jpg" alt="">
-              <div class="gallery-overlay">
-              </div>
-            </div>
-          </div>
-          <div class="gallery-item gi-6">
-            <img src="./assets/img/img-3.jpg" alt="">
-              <div class="gallery-overlay">
-                <span>Zona Postres</span>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
+        </section>
+    </main>
+
 
     <!-- ========== SPONSORS ( ========== -->
     <section class="section-sponsors" aria-label="Patrocinadores">
@@ -265,64 +294,105 @@
         </div>
       </div>
     </section>
-
-    <!-- ========== FOOTER ========== -->
-  <footer class="site-footer" id="contacto">
-    <div class="container footer-grid">
-      <div class="footer-brand">
-        <div class="logo footer-logo">
-          <div class="logo-text">
-            <span class="logo-main">Shattered Riffs</span>
-            <span class="logo-sub">Riffs</span>
-          </div>
-        </div>
-        <p>The band that will make you connect with music in an inexplicable way.</p>
-        <div class="social-links">
-          <a href="#" aria-label="Instagram" class="social-link">📸</a>
-          <a href="#" aria-label="Facebook" class="social-link">👍</a>
-          <a href="#" aria-label="Twitter" class="social-link">🐦</a>
-          <a href="#" aria-label="Spottify" class="social-link">🎵</a>
-        </div>
-      </div>
-
-      <div class="footer-links">
-        <h4>Enlances</h4>
-        <ul>
-          <li><a href="#events">Events</a></li>
-            <li><a href="#about">About</a></li>
-            <li><a href="#music">Music</a></li>
-            <li><a href="#media">Media</a></li>
-            <li><a href="#music">Contact</a></li>
-        </ul>
-      </div>
-
-      <div class="footer-links">
-        <h4>Citys</h4>
-        <ul>
-          <li>📍 Madrid</li>
-          <li>📍 Barcelona</li>
-          <li>📍 Valencia</li>
-        </ul>
-      </div>
-
-      <div class="footer-newsletter">
-        <h4>Newsletter</h4>
-        <p>Receive exclusive news and preventative information.</p>
-        <div class="newsletter-form">
-          <input type="email" placeholder="Your email" aria-label="Email for newsletter" />
-          <button type="button">→</button>
-        </div>
-      </div>
-    </div>
-
-    <div class="footer-bottom">
-      <p>© 2025 . Shattered Riffs All rights reserved.</p>
-      <p><a href="#top">Back to top ↑</a></p>
-    </div>
-  </footer>
-
-
   </main>
-          
+ 
+    <!-- ============================================
+         FOOTER - Información de contacto y redes
+    ============================================= -->
+    <footer id="contacto" class="footer">
+        <div class="footer__container">
+            <!-- Columnas del footer -->
+            <div class="footer__grid">
+                <!-- Columna 1: Logo y descripción -->
+                <div class="footer__brand">
+                    <div class="header__logo">
+                        <span class="logo__icon">🌙</span>
+                        <span class="logo__text">Music<span class="logo__highlight">nigth</span></span>
+                    </div>
+                    <p class="footer__description">
+                        The nighttime concert that brings together the best musicians, 
+                        and unforgettable experiences under the stars
+                    </p>
+                    <!-- Redes sociales -->
+                    <div class="footer__social">
+                        <a href="#" class="social__link" aria-label="Facebook">
+                            <svg viewBox="0 0 24 24" fill="currentColor" class="social__icon">
+                                <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
+                            </svg>
+                        </a>
+                        <a href="#" class="social__link" aria-label="Instagram">
+                            <svg viewBox="0 0 24 24" fill="currentColor" class="social__icon">
+                                <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/>
+                            </svg>
+                        </a>
+                        <a href="#" class="social__link" aria-label="Twitter">
+                            <svg viewBox="0 0 24 24" fill="currentColor" class="social__icon">
+                                <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>
+                            </svg>
+                        </a>
+                        <a href="#" class="social__link" aria-label="YouTube">
+                            <svg viewBox="0 0 24 24" fill="currentColor" class="social__icon">
+                                <path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Columna 2: Enlaces rápidos -->
+                <div class="footer__links">
+                    <h4 class="footer__title">Quick Links</h4>
+                    <ul class="footer__list">
+                        <li><a href="#inicio">Inicio</a></li>
+                        <li><a href="#fechas">upcoming Dates</a></li>
+                        <li><a href="#sobre">About</a></li>
+                        <li><a href="#zonas">Zones music</a></li>
+                        <li><a href="#galeria">Galerry</a></li>
+                    </ul>
+                </div>
+
+                <!-- Columna 3: Información -->
+                <div class="footer__links">
+                    <h4 class="footer__title">Information</h4>
+                    <ul class="footer__list">
+                        <li><a href="#">Frequently Asked Questions</a></li>
+                        <li><a href="#">Terms and Conditions</a></li>
+                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="#">Work with us</a></li>
+                        <li><a href="#">Prensa</a></li>
+                    </ul>
+                </div>
+
+                <!-- Columna 4: Contacto -->
+                <div class="footer__contact">
+                    <h4 class="footer__title">Contact</h4>
+                    <address class="footer__address">
+                        <p>
+                            <strong>Email:</strong><br>
+                            <a href="mailto:info@nochedesabores.mx">info@concert.mx</a>
+                        </p>
+                        <p>
+                            <strong>Teléfono:</strong><br>
+                            <a href="tel:+525512345678">+52 55 1234 5678</a>
+                        </p>
+                        <p>
+                            <strong>Ofis:</strong><br>
+                            Av. Paseo de la Reforma 250,<br>
+                            Col. Juárez, CDMX, México
+                        </p>
+                    </address>
+                </div>
+            </div>
+
+            <!-- Copyright -->
+            <div class="footer__bottom">
+                <p class="footer__copyright">
+                    © 2026 helda reyes. Todos los derechos reservados.
+                </p>
+                <p class="footer__credits">
+                    todo el rock
+                </p>
+            </div>
+        </div>
+    </footer>
 </body>
 </html>
