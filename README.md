@@ -56,7 +56,7 @@ prueba_de_desempeño_html_css/
 
 ---
 
-## 🧩 Sections
+##  Sections
 
 ###  Header
 - Fixed navigation
