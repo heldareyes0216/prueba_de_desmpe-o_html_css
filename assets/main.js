@@ -1,28 +1,21 @@
 // =============================================
 //  main.js — Menú hamburguesa
-// =============================================
+// ============================================
 
 // Seleccionamos los elementos que necesitamos
-const hamburger = document.getElementById('hamburger');
-const mobileNav = document.getElementById('mobileNav');
+const hamburger = document.getElementById('menu-btn');
+const mobileNav = document.getElementById('menu');
 
-// Cuando el usuario hace clic en el botón hamburguesa...
-hamburger.addEventListener('click', function () {
-
-  // Alternamos la clase 'active' en el botón (hace la animación de X)
-  hamburger.classList.toggle('active');
-
-  // Alternamos la clase 'open' en el menú (lo muestra u oculta)
-  mobileNav.classList.toggle('open');
-
+hamburger.addEventListener("click", (e) => {
+    e.stopPropagation();
+    mobileNav.classList.toogle("active");
 });
 
-// Cerramos el menú al hacer clic en cualquier enlace del menú mobile
-const mobileLinks = document.querySelectorAll('.mobile-link');
+document.querySelectorAll("nav a").forEach(link => 
+    link.addEventListener("click", () =>menubar.classList.remove("active"))
+);
 
-mobileLinks.forEach(function (link) {
-  link.addEventListener('click', function () {
-    hamburger.classList.remove('active');
-    mobileNav.classList.remove('open');
-  });
+document.addEventListener("click", (e) => {
+    if (!mobileNav.contains(e.target) && e.target !==hamburger)
+        mobileNav.classList.remove("active");
 });
