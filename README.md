@@ -8,6 +8,14 @@ The site is built using **HTML5, CSS3, and JavaScript**, applying responsive des
 
 ---
 
+## How to run the projects
+
+1. Download ot clone the project
+2. Open the project folder
+3. Open 'index.html' in your browser
+
+---
+
 ## Features
 
 - Responsive design (mobile, tablet, desktop)
