@@ -1,21 +1,16 @@
-// =============================================
-//  main.js — Menú hamburguesa
-// ============================================
+const btn = document.getElementById("menu-btn");
+const menu = document.getElementById("menu");
 
-// Seleccionamos los elementos que necesitamos
-const hamburger = document.getElementById('menu-btn');
-const mobileNav = document.getElementById('menu');
-
-hamburger.addEventListener("click", (e) => {
+btn.addEventListener("click", (e) => {
     e.stopPropagation();
-    mobileNav.classList.toogle("active");
+    menu.classList.toggle("active");
 });
 
-document.querySelectorAll("nav a").forEach(link => 
-    link.addEventListener("click", () =>menubar.classList.remove("active"))
+document.querySelectorAll("nav a").forEach(link =>
+    link.addEventListener("click", () => menu.classList.remove("active"))
 );
 
 document.addEventListener("click", (e) => {
-    if (!mobileNav.contains(e.target) && e.target !==hamburger)
-        mobileNav.classList.remove("active");
+    if (!menu.contains(e.target) && e.target !== btn)
+        menu.classList.remove("active");
 });

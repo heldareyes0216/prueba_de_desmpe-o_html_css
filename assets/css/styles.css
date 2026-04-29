@@ -1166,6 +1166,31 @@ p {
 ============================================ */
 @media (max-width: 767px) {
     /* Convertir tabla a formato de tarjetas en móvil */
+
+    .header__nav.active {
+        display: block;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        background: rgba(10, 10, 15, 0.98);
+        backdrop-filter: blur(10px);
+        border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+        padding: 1rem 0;
+    }
+
+    .header__nav.active .nav__list {
+        flex-direction: column;
+        align-items: center;
+        gap: 0;
+    }
+
+    .header__nav.active .nav__link {
+        display: block;
+        padding: 0.875rem 2rem;
+        width: 100%;
+        text-align: center;
+    }
     .fechas__table thead {
         display: none;
     }
@@ -1260,6 +1285,7 @@ p {
 .btn--primary:hover::before {
     opacity: 0.6;
 }
+
 
 
 
