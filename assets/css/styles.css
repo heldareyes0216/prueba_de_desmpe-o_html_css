@@ -106,7 +106,6 @@ address {
     font-style: normal;
 }
 
-
 /* ============================================
    3. TIPOGRAFÍA
 ============================================ */
@@ -572,11 +571,17 @@ p {
     background: var(--color-bg-dark);
 }
 
+.sobre__content {
+    max-width: 700px;
+    width: 100%;
+}
+
 .sobre__grid {
     display: grid;
     grid-template-columns: 1fr;
     gap: var(--spacing-2xl);
     align-items: center;
+    justify-items: center;
 }
 
 .sobre__intro {
@@ -629,171 +634,6 @@ p {
 .item__content p {
     font-size: 0.9rem;
     margin: 0;
-}
-
-/* Columna visual */
-.sobre__visual {
-    position: relative;
-    display: none;
-}
-
-.visual__card {
-    position: relative;
-    border-radius: var(--border-radius-lg);
-    overflow: hidden;
-    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.5);
-}
-
-.visual__card--main {
-    transform: rotate(-2deg);
-}
-
-.visual__card--secondary {
-    position: absolute;
-    bottom: -20px;
-    right: -20px;
-    width: 60%;
-    transform: rotate(3deg);
-    border: 4px solid var(--color-gold);
-}
-
-.visual__image {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-}
-
-.visual__badge {
-    position: absolute;
-    top: 20px;
-    left: 20px;
-    background: var(--color-gold);
-    color: var(--color-bg-dark);
-    padding: var(--spacing-sm) var(--spacing-md);
-    border-radius: var(--border-radius-md);
-    text-align: center;
-}
-
-.badge__number {
-    display: block;
-    font-family: var(--font-heading);
-    font-size: 2rem;
-    font-weight: 900;
-    line-height: 1;
-}
-
-.badge__text {
-    font-size: 0.75rem;
-    font-weight: 600;
-    text-transform: uppercase;
-}
-
-/* ============================================
-   9. SECCIÓN ZONAS TEMÁTICAS (CSS Grid)
-============================================ */
-.zonas {
-    padding: var(--spacing-3xl) 0;
-    background: linear-gradient(180deg, var(--color-bg-medium) 0%, var(--color-bg-dark) 100%);
-}
-
-/* Grid de tarjetas - CSS Grid obligatorio */
-.zonas__grid {
-    display: grid;
-    grid-template-columns: 1fr;
-    gap: var(--spacing-lg);
-}
-
-/* Tarjetas de zona */
-.zona-card {
-    position: relative;
-    background: var(--color-bg-card);
-    border-radius: var(--border-radius-lg);
-    overflow: hidden;
-    border: 1px solid rgba(255, 255, 255, 0.05);
-    transition: all var(--transition-medium);
-}
-
-.zona-card:hover {
-    transform: translateY(-5px);
-    border-color: var(--color-gold);
-    box-shadow: 0 20px 40px rgba(212, 175, 55, 0.15);
-}
-
-.zona-card__image-wrapper {
-    position: relative;
-    height: 200px;
-    overflow: hidden;
-}
-
-.zona-card__image {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    transition: transform var(--transition-slow);
-}
-
-.zona-card:hover .zona-card__image {
-    transform: scale(1.1);
-}
-
-.zona-card__overlay {
-    position: absolute;
-    inset: 0;
-    background: linear-gradient(to top, var(--color-bg-card) 0%, transparent 50%);
-}
-
-.zona-card__content {
-    padding: var(--spacing-md);
-}
-
-.zona-card__tag {
-    display: inline-block;
-    padding: 0.25rem 0.75rem;
-    background: var(--color-gold);
-    color: var(--color-bg-dark);
-    font-size: 0.75rem;
-    font-weight: 700;
-    text-transform: uppercase;
-    border-radius: var(--border-radius-sm);
-    margin-bottom: var(--spacing-sm);
-}
-
-.zona-card__title {
-    color: var(--color-text-primary);
-    margin-bottom: var(--spacing-xs);
-}
-
-.zona-card__description {
-    font-size: 0.9rem;
-    margin-bottom: var(--spacing-sm);
-}
-
-.zona-card__features {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 0.5rem;
-    margin-bottom: var(--spacing-md);
-}
-
-.zona-card__features li {
-    padding: 0.25rem 0.5rem;
-    background: rgba(255, 255, 255, 0.05);
-    font-size: 0.8rem;
-    color: var(--color-text-muted);
-    border-radius: var(--border-radius-sm);
-}
-
-.zona-card__link {
-    display: inline-block;
-    color: var(--color-gold);
-    font-weight: 600;
-    font-size: 0.9rem;
-    transition: all var(--transition-fast);
-}
-
-.zona-card__link:hover {
-    color: var(--color-gold-light);
-    transform: translateX(5px);
 }
 
 /* ============================================
@@ -855,9 +695,9 @@ p {
    ============================================= */
 .section-sponsors {
   padding: 2.5rem 0;
-  background: var(--superficie);
-  border-top: 1px solid var(--borde);
-  border-bottom: 1px solid var(--borde);
+  background: var(--color-bg-medium);
+  border-top: 1px solid rgba(212, 175, 55, 0.05);
+  border-bottom: 1px solid rgba(212, 175, 55, 0.05);
   text-align: center;
 }
 
@@ -871,8 +711,8 @@ p {
 }
 .sponsor {
   font-size: 0.83rem;
-  color: var(--gris);
-  border: 1px solid var(--borde);
+  color: var(--color-text-muted);
+  border: 1px solid rgba(131, 56, 236, 0.1);
   padding: 0.45rem 1.1rem;
   border-radius: 6px;
   transition: color 0.2s, border-color 0.2s;
@@ -1062,37 +902,9 @@ p {
     
     /* Sección Sobre */
     .sobre__grid {
-        grid-template-columns: 1fr 1fr;
+        grid-template-columns: 1fr;
     }
-    
-    .sobre__visual {
-        display: block;
-    }
-    
-    /* Zonas Grid - 2 columnas */
-    .zonas__grid {
-        grid-template-columns: repeat(2, 1fr);
-    }
-    
-    /* Primera tarjeta destacada ocupa 2 columnas */
-    .zona-card--featured {
-        grid-column: span 2;
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-    }
-    
-    .zona-card--featured .zona-card__image-wrapper {
-        height: 100%;
-        min-height: 300px;
-    }
-    
-    .zona-card--featured .zona-card__content {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        padding: var(--spacing-lg);
-    }
-    
+     
     /* Galería Grid */
     .galeria__grid {
         grid-template-columns: repeat(3, 1fr);
@@ -1128,15 +940,6 @@ p {
     /* Hero más impactante */
     .hero__title {
         letter-spacing: -2px;
-    }
-    
-    /* Zonas Grid - 3 columnas */
-    .zonas__grid {
-        grid-template-columns: repeat(3, 1fr);
-    }
-    
-    .zona-card--featured {
-        grid-column: span 2;
     }
     
     /* Galería más grande */
@@ -1285,7 +1088,3 @@ p {
 .btn--primary:hover::before {
     opacity: 0.6;
 }
-
-
-
-
