@@ -37,7 +37,7 @@ The site is built using **HTML5, CSS3, and JavaScript**, applying responsive des
 
 ```
 
-project/
+prueba_de_desempeño_html_css/
 │
 ├── index.html
 ├── README.md
